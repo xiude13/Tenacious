@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tenacious Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBF8F3;
+    --surface: #F1ECE1;
+    --ink: #201A12;
+    --muted: #6B6459;
+    --accent: #C97F1E;
+    --divider: #DDD5C6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14120D;
+      --surface: #1C1913;
+      --ink: #F3EDE1;
+      --muted: #A79C87;
+      --accent: #E8A33D;
+      --divider: #33291B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14120D;
+    --surface: #1C1913;
+    --ink: #F3EDE1;
+    --muted: #A79C87;
+    --accent: #E8A33D;
+    --divider: #33291B;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Work Sans', system-ui, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.65;
+    margin: 0;
+    padding: 64px 24px 96px;
+  }
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+  }
+  .updated { color: var(--muted); font-size: 13.5px; margin: 0 0 40px; }
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 44px 0 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--divider);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 32px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--ink); }
+  .muted { color: var(--muted); }
+  code {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    background: var(--surface);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  .card {
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin: 16px 0 20px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  .fill-in {
+    background: rgba(201, 127, 30, 0.18);
+    color: var(--accent);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 20px; font-size: 14.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--divider); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .contact {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--divider);
+    color: var(--muted);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <span class="eyebrow">Privacy Policy</span>
+  <h1>Tenacious</h1>
+  <!-- TODO: confirm/update this date when you actually publish -->
+  <p class="updated">Last updated: September 9, 2026 &middot; Applies to the Tenacious Android app (<code>com.tenacious.app</code>)</p>
+
+  <div class="card">
+    <p><strong>In short:</strong> Tenacious stores your workout plans, history, and settings only on your own device. The one thing it sends anywhere is your GPS route during an active Cardio session &mdash; and that goes to OpenStreetMap, just to draw the map, not to us. We don't run any servers, don't have user accounts, and don't sell or share your data with anyone.</p>
+  </div>
+
+  <h2>What Tenacious stores, and where</h2>
+  <p>Everything you enter into Tenacious &mdash; workout plans, exercise history, completed sessions, cardio routes, and your app settings &mdash; is stored locally on your device only, using Android's standard app storage. None of it is uploaded to us, because we don't operate any server that could receive it.</p>
+  <p class="muted">Android's own device backup service may include this local data in your regular Google account backup, the same way it backs up most apps' data &mdash; that's a device-level setting, not something Tenacious controls or initiates itself.</p>
+
+  <h2>Location</h2>
+  <p>Tenacious asks for location access only to record a GPS route during an active <strong>Cardio</strong> (run/cycle tracking) session. Specifically:</p>
+  <ul>
+    <li>Location is only read while you have a cardio session actively running or paused on screen &mdash; never in the background, and never outside that feature.</li>
+    <li>The recorded route, distance, and pace are saved locally as part of that session's history, in the same on-device storage as everything else.</li>
+    <li>To draw the live map during a session, Tenacious requests map imagery from <strong>OpenStreetMap's tile servers</strong> for the area you're currently near. That request necessarily reveals your approximate location (and IP address) to OpenStreetMap's infrastructure, the same way it would to any map provider — see <a href="https://osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org/wiki/Privacy_Policy</a> for their policy. We don't add any tracking of our own on top of this.</li>
+    <li>You can deny or later revoke location permission in your device's app settings at any time; Cardio's GPS tracking simply won't work until it's granted again.</li>
+  </ul>
+
+  <h2>Notifications</h2>
+  <p>Tenacious can show two kinds of notifications, both generated entirely on your device:</p>
+  <ul>
+    <li><strong>Scheduled reminders</strong> for workouts you've set a reminder time for.</li>
+    <li><strong>A live status notification</strong> during an active workout or cardio session, showing your current progress &mdash; this is also what lets a paired smartwatch mirror that status via Android's own Wear OS notification bridging.</li>
+  </ul>
+  <p>These are local notifications scheduled by the app itself, not push notifications from a server &mdash; no notification content ever leaves your device.</p>
+
+  <h2>Sharing a workout plan</h2>
+  <p>The Share feature hands a plan file to whichever app you choose from your device's own share sheet (Messages, email, WhatsApp, etc.) &mdash; that's a direct action you take, not something Tenacious transmits on its own. If someone shares a plan file to you and you open it, Tenacious reads that file locally to show you an import confirmation; it isn't uploaded anywhere either.</p>
+
+  <h2>Third-party services this app uses</h2>
+  <table>
+    <tr><th>Service</th><th>What it's used for</th><th>What it can see</th></tr>
+    <tr>
+      <td>OpenStreetMap tile servers</td>
+      <td>Drawing the live map during Cardio tracking</td>
+      <td>The map area requested (i.e. your approximate location) and your device's IP address, for that request only</td>
+    </tr>
+    <tr>
+      <td>Google Fonts</td>
+      <td>Loading the app's typefaces</td>
+      <td>Standard web request metadata (e.g. IP address) when a font file is fetched</td>
+    </tr>
+  </table>
+  <p class="muted">Neither of these is an analytics, advertising, or tracking service &mdash; Tenacious doesn't include any of those, and doesn't otherwise send app usage data anywhere.</p>
+
+  <h2>What we don't do</h2>
+  <ul>
+    <li>No user accounts, sign-in, or personally-identifying information collected by us.</li>
+    <li>No analytics or crash-reporting SDKs.</li>
+    <li>No advertising or ad SDKs.</li>
+    <li>No selling, renting, or sharing your data with third parties, ever.</li>
+  </ul>
+
+  <h2>Data deletion</h2>
+  <p>Settings has a <strong>"Clear all data"</strong> option that deletes every saved plan and your entire workout/cardio history from the app immediately. Uninstalling Tenacious removes everything else stored locally as well (subject to the Android device-backup note above).</p>
+
+  <h2>Children's privacy</h2>
+  <p>Tenacious is a general-audience fitness utility, not directed at children, and we don't knowingly collect data from children. Since the app doesn't collect data from us in the first place, this is largely academic — but if you believe a child has used the app and you have a concern, contact us at the address below.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, we'll update the "Last updated" date above. Continued use of the app after a change means you accept the update.</p>
+
+  <div class="contact">
+    <!-- TODO: replace with your real contact email before publishing -->
+    Questions about this policy? Contact <span class="fill-in">nokvez73@gmail.com</span>.
+  </div>
+</div>
+</body>f
+</html>
