@@ -118,35 +118,63 @@
   <span class="eyebrow">Privacy Policy</span>
   <h1>Tenacious</h1>
   <!-- TODO: confirm/update this date when you actually publish -->
-  <p class="updated">Last updated: September 9, 2026 &middot; Applies to the Tenacious Android app (<code>com.tenacious.app</code>)</p>
+  <p class="updated">Last updated: October 3, 2026 &middot; Applies to the Tenacious Android app (<code>com.tenacious.app</code>)</p>
 
   <div class="card">
-    <p><strong>In short:</strong> Tenacious stores your workout plans, history, and settings only on your own device. The one thing it sends anywhere is your GPS route during an active Cardio session &mdash; and that goes to OpenStreetMap, just to draw the map, not to us. We don't run any servers, don't have user accounts, and don't sell or share your data with anyone.</p>
+    <p><strong>In short:</strong> Tenacious keeps your workouts, body measurements, photos, period log, and settings only on your own device. The one thing it sends anywhere is a request for map images during an active Cardio session, and that goes to OpenStreetMap to draw the map, not to us. We don't run any servers, there are no user accounts, and we don't sell or share your data with anyone.</p>
   </div>
 
   <h2>What Tenacious stores, and where</h2>
-  <p>Everything you enter into Tenacious &mdash; workout plans, exercise history, completed sessions, cardio routes, and your app settings &mdash; is stored locally on your device only, using Android's standard app storage. None of it is uploaded to us, because we don't operate any server that could receive it.</p>
-  <p class="muted">Android's own device backup service may include this local data in your regular Google account backup, the same way it backs up most apps' data &mdash; that's a device-level setting, not something Tenacious controls or initiates itself.</p>
+  <p>Everything you enter into Tenacious is stored on your device only, using Android's standard app storage. That includes:</p>
+  <ul>
+    <li>workout plans, exercise history, and completed sessions;</li>
+    <li>cardio sessions, including their routes, distance, and pace;</li>
+    <li>heart-rate readings saved with a workout or cardio session;</li>
+    <li>body measurements, and progress photos (kept in the app's private storage, so they don't appear in your Gallery);</li>
+    <li>your profile (name, birth year, sex, heart rates, injuries, and emergency contact), your training program, and your progress in the app;</li>
+    <li>your period log, if you use the Cycle screen; and</li>
+    <li>your app settings.</li>
+  </ul>
+  <p>None of it is uploaded to us, because we don't operate any server that could receive it.</p>
+  <p class="muted">Tenacious turns off Android's automatic cloud backup, so none of this is copied to your Google account. If you want a copy, <strong>Settings</strong> can create a backup file that you save and keep yourself. Progress photos can be backed up the same way.</p>
 
   <h2>Location</h2>
-  <p>Tenacious asks for location access only to record a GPS route during an active <strong>Cardio</strong> (run/cycle tracking) session. Specifically:</p>
+  <p>Tenacious asks for location access only to record a GPS route during an active <strong>Cardio</strong> (run or ride tracking) session. Specifically:</p>
   <ul>
-    <li>Location is only read while you have a cardio session actively running or paused on screen &mdash; never in the background, and never outside that feature.</li>
-    <li>The recorded route, distance, and pace are saved locally as part of that session's history, in the same on-device storage as everything else.</li>
-    <li>To draw the live map during a session, Tenacious requests map imagery from <strong>OpenStreetMap's tile servers</strong> for the area you're currently near. That request necessarily reveals your approximate location (and IP address) to OpenStreetMap's infrastructure, the same way it would to any map provider — see <a href="https://osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org/wiki/Privacy_Policy</a> for their policy. We don't add any tracking of our own on top of this.</li>
-    <li>You can deny or later revoke location permission in your device's app settings at any time; Cardio's GPS tracking simply won't work until it's granted again.</li>
+    <li>Location is only read while a cardio session is running or paused. It is never read when you are not using that feature.</li>
+    <li>The recorded route, distance, and pace are saved on your device as part of that session's history, in the same storage as everything else.</li>
+    <li>To draw the live map during a session, Tenacious requests map images from <strong>OpenStreetMap's tile servers</strong> for the area you are currently near. That request necessarily reveals your approximate location (and IP address) to OpenStreetMap, as it would to any map provider. See <a href="https://osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org/wiki/Privacy_Policy</a> for their policy. We don't add any tracking of our own on top of this.</li>
+    <li>You can deny or later revoke location permission in your device's app settings at any time. Cardio's GPS tracking simply won't work until it is granted again.</li>
   </ul>
+
+  <h2>Camera</h2>
+  <p>Tenacious uses the camera in two places, and only when you ask it to:</p>
+  <ul>
+    <li><strong>Progress photos.</strong> A photo you take is saved on your device and goes nowhere else.</li>
+    <li><strong>Rep counting.</strong> The live picture is analysed on your phone to find your body's position and count repetitions. The picture is not saved, recorded, or sent anywhere.</li>
+  </ul>
+  <p>You can deny or revoke the camera permission at any time. Those two features then stop working, and the rest of the app is unaffected.</p>
+
+  <h2>Bluetooth and heart-rate monitors</h2>
+  <p>Tenacious asks for Bluetooth (&ldquo;nearby devices&rdquo;) access only to find and connect to a heart-rate monitor that you choose. The readings are shown on screen and saved with that workout or cardio session on your device. Tenacious doesn't use Bluetooth for anything else.</p>
 
   <h2>Notifications</h2>
-  <p>Tenacious can show two kinds of notifications, both generated entirely on your device:</p>
+  <p>Tenacious can show these notifications, all generated entirely on your device:</p>
   <ul>
-    <li><strong>Scheduled reminders</strong> for workouts you've set a reminder time for.</li>
-    <li><strong>A live status notification</strong> during an active workout or cardio session, showing your current progress &mdash; this is also what lets a paired smartwatch mirror that status via Android's own Wear OS notification bridging.</li>
+    <li><strong>Scheduled reminders</strong> for workouts you have set a reminder time for.</li>
+    <li><strong>A live status notification</strong> during an active workout or cardio session, showing your current progress. This is also what lets a paired smartwatch mirror that status through Android's own Wear OS notification bridging.</li>
+    <li><strong>A &ldquo;how did it feel?&rdquo; prompt</strong> when a workout finishes while the app is not on screen.</li>
+    <li><strong>A period reminder</strong>, if you turn it on in the Cycle screen.</li>
   </ul>
-  <p>These are local notifications scheduled by the app itself, not push notifications from a server &mdash; no notification content ever leaves your device.</p>
+  <p>These are local notifications scheduled by the app itself, not push notifications from a server. No notification content ever leaves your device.</p>
 
-  <h2>Sharing a workout plan</h2>
-  <p>The Share feature hands a plan file to whichever app you choose from your device's own share sheet (Messages, email, WhatsApp, etc.) &mdash; that's a direct action you take, not something Tenacious transmits on its own. If someone shares a plan file to you and you open it, Tenacious reads that file locally to show you an import confirmation; it isn't uploaded anywhere either.</p>
+  <h2>Sharing, backups, and the diagnostics report</h2>
+  <p>Some features hand a file or text to another app, always through your device's own share sheet or file picker. You choose where it goes, and Tenacious does not transmit anything on its own:</p>
+  <ul>
+    <li><strong>Sharing a workout plan.</strong> The plan file goes to whichever app you pick (Messages, email, WhatsApp, and so on). If someone shares a plan file with you and you open it, Tenacious reads that file on your device to show an import confirmation. It isn't uploaded anywhere.</li>
+    <li><strong>Backup files.</strong> A backup contains your saved data (including your period log and profile). You decide where to save it, and restoring one replaces the data on your phone.</li>
+    <li><strong>The diagnostics report.</strong> This is a text report you can open in the app and choose to send. It contains the app and Android version, your phone's make and model, screen and text size, memory and storage use, and a log of app events and errors. It does not contain your workouts, measurements, photos, location, heart rate, or period log.</li>
+  </ul>
 
   <h2>Third-party services this app uses</h2>
   <table>
@@ -154,41 +182,36 @@
     <tr>
       <td>OpenStreetMap tile servers</td>
       <td>Drawing the live map during Cardio tracking</td>
-      <td>The map area requested (i.e. your approximate location) and your device's IP address, for that request only</td>
-    </tr>
-    <tr>
-      <td>Google Fonts</td>
-      <td>Loading the app's typefaces</td>
-      <td>Standard web request metadata (e.g. IP address) when a font file is fetched</td>
+      <td>The map area requested (that is, your approximate location) and your device's IP address, for that request only</td>
     </tr>
   </table>
-  <p class="muted">Neither of these is an analytics, advertising, or tracking service &mdash; Tenacious doesn't include any of those, and doesn't otherwise send app usage data anywhere.</p>
+  <p class="muted">This is not an analytics, advertising, or tracking service. Tenacious doesn't include any of those, and doesn't otherwise send app usage data anywhere. The app's fonts are bundled inside the app, so no font files are downloaded.</p>
 
   <h2>What we don't do</h2>
   <ul>
-    <li>No user accounts, sign-in, or personally-identifying information collected by us.</li>
-    <li>No analytics or crash-reporting SDKs.</li>
-    <li>No advertising or ad SDKs.</li>
-    <li>No selling, renting, or sharing your data with third parties, ever.</li>
+    <li>We don't collect user accounts, sign-in details, or personally identifying information.</li>
+    <li>We don't use analytics or crash-reporting SDKs.</li>
+    <li>We don't use advertising or ad SDKs.</li>
+    <li>We never sell, rent, or share your data with third parties.</li>
   </ul>
 
   <h2 id="data-deletion">Requesting data deletion</h2>
-  <p>Because Tenacious doesn't operate any server or account system, there's nothing on our end to send a deletion request to — everything is stored only on your own device, so deleting it is entirely in your control, immediately, with no waiting period:</p>
+  <p>Because Tenacious doesn't operate any server or account system, there is nothing on our end to send a deletion request to. Everything is stored only on your own device, so deleting it is entirely in your control. It happens immediately, with no waiting period:</p>
   <ul>
-    <li><strong>To delete your workout plans and history, but keep the app:</strong> open Tenacious, go to <strong>Settings</strong>, and tap <strong>"Clear all data."</strong> This immediately and permanently deletes every saved plan and your entire workout/cardio history.</li>
-    <li><strong>To delete everything, including your settings:</strong> uninstall Tenacious from your device. This removes all remaining local app data (subject to the Android device-backup note above, which is a device-level setting outside the app's control).</li>
+    <li><strong>To delete your data but keep the app:</strong> open Tenacious, go to <strong>Settings</strong>, and tap <strong>&ldquo;Clear all data.&rdquo;</strong> This immediately and permanently deletes your plans, workout and cardio history, body measurements, progress photos, training program, progress in the app, period log, and profile.</li>
+    <li><strong>To delete everything, including your settings:</strong> uninstall Tenacious from your device. This removes all remaining app data on the device. Backup files and shared files that you saved elsewhere are not removed; delete those yourself.</li>
   </ul>
-  <p class="muted">What's deleted: workout plans, exercise history, completed sessions, cardio routes, and app settings. There's no server-side copy of any of it to separately delete, and no retention period — it's gone as soon as you take either action above.</p>
+  <p class="muted">There is no server-side copy of any of it to delete separately, and no retention period. It is gone as soon as you take either action above.</p>
+
   <h2>Children's privacy</h2>
-  <p>Tenacious is a general-audience fitness utility, not directed at children, and we don't knowingly collect data from children. Since the app doesn't collect data from us in the first place, this is largely academic — but if you believe a child has used the app and you have a concern, contact us at the address below.</p>
+  <p>Tenacious is a general-audience fitness app and is not directed at children. We don't knowingly collect data from children. Since the app doesn't collect data from you in the first place, this is largely academic. But if you believe a child has used the app and you have a concern, please contact us at the address below.</p>
 
   <h2>Changes to this policy</h2>
-  <p>If this policy changes, we'll update the "Last updated" date above. Continued use of the app after a change means you accept the update.</p>
+  <p>If this policy changes, we will update the &ldquo;Last updated&rdquo; date above. Continuing to use the app after a change means you accept the update.</p>
 
   <div class="contact">
-    <!-- TODO: replace with your real contact email before publishing -->
-    Questions about this policy? Contact <span class="fill-in">nokvez73@gmail.com</span>.
+    Questions about this policy? Contact <span class="fill-in">xiude13@gmail.com</span>.
   </div>
 </div>
-</body>f
+</body>
 </html>
